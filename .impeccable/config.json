@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "src/content/tracks.ts"
+        ],
+        "createdAt": "2026-09-10T19:33:36.006Z",
+        "reason": "false positive: '<img>' appears as literal text inside English lesson strings teaching the alt attribute, not as an HTML tag"
+      }
+    ]
+  }
+}
