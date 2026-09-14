@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/*
+  TechnoFluency design tokens.
+  Brand: dark blue #0a0426 (ink) + orange #ed4d02 (flame) on off-white.
+  Direction: modern, technical, career-focused. No school-book vibe.
+*/
+
+@theme {
+  --color-ink-50: #eceaf2;
+  --color-ink-100: #d2cee0;
+  --color-ink-200: #a49bc2;
+  --color-ink-300: #6f61a0;
+  --color-ink-400: #453a73;
+  --color-ink-500: #2a2350;
+  --color-ink-700: #171036;
+  --color-ink-900: #0d0729;
+  --color-ink-950: #0a0426;
+
+  --color-flame-50: #fff2ea;
+  --color-flame-100: #ffdcc4;
+  --color-flame-200: #ffb98a;
+  --color-flame-300: #fb8f4d;
+  --color-flame-400: #f36a21;
+  --color-flame-500: #ed4d02;
+  --color-flame-600: #c63e00;
+  --color-flame-700: #9a3103;
+
+  --color-paper: #f7f7fb;
+  --color-cloud: #eef0f6;
+  --color-line: #e2e3ee;
+
+  --color-grass-500: #1f9d55;
+  --color-grass-50: #e7f6ee;
+  --color-berry-500: #d92d20;
+  --color-berry-50: #fdeceb;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+}
+
+:root {
+  --background: var(--color-paper);
+  --foreground: var(--color-ink-950);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.tf-card {
+  border-radius: var(--radius-2xl);
+  background: #ffffff;
+  border: 1px solid var(--color-line);
+  box-shadow: 0 1px 2px rgba(10, 4, 38, 0.04), 0 8px 24px -16px rgba(10, 4, 38, 0.12);
+}
+
+.tf-gradient-ink {
+  background-image: linear-gradient(150deg, #0a0426 0%, #1a1147 55%, #2a2350 100%);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-flame-500);
+  outline-offset: 2px;
+}
+
+@keyframes tf-pop {
+  0% { transform: scale(0.96); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.tf-pop { animation: tf-pop 0.18s ease-out both; }
+
+@keyframes tf-rise {
+  0% { transform: translateY(6px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.tf-rise { animation: tf-rise 0.25s ease-out both; }
